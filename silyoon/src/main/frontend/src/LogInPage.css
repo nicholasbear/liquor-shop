@@ -1,0 +1,49 @@
+.login_container{
+  display: flex;
+  align-items: center;
+  padding-left: 40vw;
+  padding-right:40vw;
+  min-height: 100vh;
+  background-color: rgb(53,53,53);
+  font-size: 15px;
+}
+
+.input_row{
+  width : 20vw;
+  height: 4vh;
+  padding-bottom:2vh;
+  padding-left: 5px;
+  background-color: aliceblue;
+  font-size: 15px;
+  padding-top: 2vh;
+  margin-bottom: 10px;
+}
+
+.show_password_button{
+  margin-bottom: 10px;
+}
+
+.show_password_title{
+  color: white;
+}
+
+.login_button{
+  background-color: #75c2b1;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  position: relative;
+  opacity: 10;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 5vh;
+  padding-top: 2.5vh;
+  font-weight: bold;
+}
+
+.join_button{
+  background-color:#75c2b1;
+  height: 5vh;
+  padding-top: 2.5vh;
+  font-weight: bold;
+  border-radius: 0.7rem;
+}
