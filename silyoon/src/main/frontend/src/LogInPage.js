@@ -13,6 +13,14 @@ function LogInPage() {
     const [isShowPwChecked, setShowPwChecked] = useState(false)
     const passwordRef = useRef(null)
 
+    const handleIdInputChange = (event) => {
+        setUserIdInput(event.target.value);
+      };
+
+      const handlePwInputChange = (event) => {
+        setUserPwInput(event.target.value);
+      };
+
     const handleShowPwChecked = async () => {
         const password = await passwordRef.current
         if (password === null) return
@@ -31,7 +39,7 @@ function LogInPage() {
         <form>
         <div >
             <input className="input_row" type='text' name='userId' id='id' placeholder='아이디' 
-                    value={userIdInput}
+                    value={userIdInput} onChange={handleIdInputChange}
                     />
             {
             userIdInput && <button>X</button>
@@ -42,7 +50,9 @@ function LogInPage() {
                     maxLength={16}
                     value={userPwInput}
                     
-                    ref={passwordRef}/>
+                    ref={passwordRef}
+                    onChange={handlePwInputChange}
+                    />
             {
             userPwInput && <button>X</button>
             }
@@ -54,9 +64,9 @@ function LogInPage() {
             </label>
         </div>
         <div align="center" className="login_button">로그인</div>
-        <button align="center" className="join_button" onClick={gosign}>
+        <div align="center" className="join_button" onClick={gosign}>
             회원가입
-        </button>
+        </div>
         </form>
     </div>
     )
